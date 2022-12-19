@@ -1,0 +1,42 @@
+<section id="quiz" class="quiz">
+  <div class="container">
+    <h2 class="visually-hidden">Подбор товара - квиз</h2>
+    <div class="quiz__content">
+      <h3 class="title quiz__title">Мы подберем идеальную пару для вас</h3>
+      <p class="quiz__descr descr">Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями
+      </p>
+      <form class="quiz-form" method="POST">
+        <div class="quiz-questions">
+
+        </div>
+        <div class="last-question">
+          <div class="last-question__form">
+            <div class="last-question__left">
+              <h3 class="title title--white last-question__title">
+                Получить предложение
+              </h3>
+              <p class="descr descr--white last-question__descr">
+                Получите подборку подходящих для вас моделей на почту
+              </p>
+              <label class="form__label">
+                <input type="text" name="Имя" class="input-reset form__input last-question__input"
+                  placeholder="Ваше имя">
+              </label>
+              <label class="form__label">
+                <input type="email" name="Email" class="input-reset form__input last-question__input"
+                  placeholder="E-mail">
+              </label>
+              <button class="btn-reset btn btn--accent form__btn last-question__btn">Отправить</button>
+            </div>
+            <div class="last-question__decorate">
+              <picture>
+                <source srcset="img/phone.webp" type="image/webp">
+                <img loading="lazy" src="img/phone.png" class="image" width="205" height="411" alt="">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

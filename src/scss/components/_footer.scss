@@ -1,0 +1,26 @@
+.footer {
+  background-color: var(--river-color);
+  &__container {
+    padding: 20px 20px;
+    align-items: center;
+  }
+
+  &__left {
+    grid-column: 2 span;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 10 span;
+  }
+
+}
+
+.logo {
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--light-color);
+}

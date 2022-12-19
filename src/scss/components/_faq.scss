@@ -1,0 +1,19 @@
+.faq {
+  padding: 60px 0;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__accordion {
+    padding: 0 100px;
+
+    @include small-tablet {
+      padding: 0 30px;
+    }
+
+    @include mobile {
+      padding: 0 5px;
+    }
+  }
+}

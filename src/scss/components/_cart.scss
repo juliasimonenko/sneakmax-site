@@ -1,0 +1,245 @@
+.cart {
+  position: relative;
+  padding-right: 8px;
+  margin-left: var(--main-offset);
+
+  &__btn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      fill: var(--light-color);
+      pointer-events: none;
+    }
+
+    &--inactive {
+      pointer-events: none;
+    }
+
+    @include tablet {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__count {
+    position: absolute;
+    right: -6px;
+    bottom: -6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: var(--accent-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: var(--light-color);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+
+
+    &--visible {
+      opacity: 1;
+    }
+  }
+
+  @include tablet {
+    padding-right: 80px;
+  }
+
+}
+
+.mini-cart {
+  position: absolute;
+  right: 0;
+  top: 47px;
+  width: 480px;
+  padding: 0 5px;
+  background-color: var(--light-color);
+  box-shadow: 0 -4px 10px rgba(0, 13, 84, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &__top {
+    max-height: 323px;
+    padding: 10px 15px;
+
+    @include mobile {
+      padding: 10px 15px 10px 5px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+  }
+
+  &__bottom {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px -4px 10px rgba(0, 13, 84, 0.1);
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__itog {
+    display: flex;
+    flex-direction: column;
+
+    @include small-tablet {
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__txt {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--river-color);
+
+    @include small-tablet {
+      margin-right: 10px;
+    }
+  }
+
+  &__summ {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--river-color);
+  }
+
+  .simplebar-track.simplebar-vertical {
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 4px;
+    background: rgba(20, 16, 36, 0.08);
+  }
+
+  .simplebar-scrollbar::before {
+    left: 0;
+    right: 0;
+    border-radius: 40px;
+    width: 4px;
+    background-color: var(--river-color);
+    opacity: 1;
+  }
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  @include mobile {
+    width: calc(100vw - 30px)
+  }
+}
+
+
+.mini-product {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      position: relative;
+    }
+  }
+
+  &__text {
+    padding: 0 30px 0 10px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 14px;
+    max-width: 268px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--river-color);
+
+    @include mobile {
+      font-size: 13px;
+    }
+  }
+
+  &__price {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--river-color);
+  }
+
+  &__delete {
+    width: 20px;
+    height: 20px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: var(--river-color);
+      transition: fill 0.3s ease-in-out;
+      pointer-events: none;
+      object-fit: cover;
+
+      @include for-desktop {
+        &:hover {
+          fill: #ff0000;
+        }
+      }
+    }
+
+    @include mobile {
+      position: absolute;
+      right: 0;
+      top: 30%;
+      z-index: 100;
+    }
+  }
+
+
+}
+
+

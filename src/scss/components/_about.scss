@@ -1,0 +1,100 @@
+.about {
+  position: relative;
+  background-color: var(--blue-color);
+
+  @include small-tablet {
+    padding: 30px 10px;
+  }
+
+  &__container {
+    @include small-tablet {
+      display: block;
+    }
+  }
+
+
+  &__figure {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 4;
+  }
+
+  &__left {
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 5 span;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__descr {
+    max-width: 400px;
+    margin-bottom: 20px;
+
+    @include small-tablet {
+      max-width: none;
+    }
+  }
+
+  &__cite {
+    position: relative;
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    color: var(--light-color);
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 116px;
+      top: 10px;
+      width: 30px;
+      height: 3px;
+      background-color: var(--light-color);
+    }
+  }
+
+  &__right {
+    grid-column: 7 span;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    max-width: 680px;
+    width: 100%;
+    height: 580px;
+    position: relative;
+    z-index: 2;
+    &::before,
+    &::after{
+       content: "";
+       position: absolute;
+       width: 0;
+       height: 0;
+       border-style: solid;
+    }
+    &::before{
+       left: 0;
+       border-width: 580px 180px 0 0;
+       border-color: #484283 transparent transparent transparent;
+    }
+    &::after{
+       right: 0;
+       border-width: 0 0 580px 180px;
+       border-color: transparent transparent #484283 transparent;
+    }
+  }
+}

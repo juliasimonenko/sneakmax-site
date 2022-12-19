@@ -1,0 +1,42 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--blue-color);
+
+
+  &__container {
+    padding: 20px 5px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+    @include tablet {
+      padding: 20px 15px;
+    }
+  }
+
+  &__left {
+    grid-column: 3 span;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 9 span;
+  }
+
+}
+
+.logo {
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--light-color);
+
+  @include mobile {
+    font-size: 23px !important;
+  }
+}

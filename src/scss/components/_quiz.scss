@@ -1,0 +1,136 @@
+.quiz {
+  padding: 56px 0;
+
+  &__content {
+    background-color: var(--peach-color);
+    padding: 40px 100px;
+
+    @include small-tablet {
+      padding: 40px 30px;
+    }
+
+    @include mobile {
+      padding: 30px 15px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__descr {
+    padding-bottom: 5px;
+    margin-bottom: 18px;
+    color: var(--gray-color);
+    border-bottom: 1px solid currentColor;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  .quiz-question {
+    &__title {
+      margin: 0;
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 24px;
+      color: var(--river-color);
+
+      @include small-tablet {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__answers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px 70px;
+      border-bottom: 1px solid var(--gray-color);
+      padding-bottom: 40px;
+      margin-bottom: 20px;
+
+      @include small-tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include mobile {
+        gap: 10px 10px;
+      }
+    }
+
+    &__label {
+      grid-column: 2 span;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    &__message {
+      width: 465px;
+      min-height: 246px;
+      border-radius: 4px;
+      resize: none;
+      background-color: var(--light-color);
+      border: none;
+
+      &::placeholder {
+        padding: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: var(--cameo-color);
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    &__item {
+      grid-column: 1 span;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .quiz-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+
+    &__count {
+      margin: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+      color: var(--gray-color);
+
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__btn {
+      padding: 17px 42px;
+      border: 1px solid var(--river-color);
+      border-radius: 4px;
+      color: var(--river-color);
+    }
+
+  }
+
+  .last-question {
+    display: none;
+  }
+}

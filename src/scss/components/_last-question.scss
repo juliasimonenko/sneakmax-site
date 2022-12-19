@@ -1,0 +1,43 @@
+.last-question {
+  position: relative;
+  margin-top: 25px;
+  max-width: 655px;
+  border-radius: 4px;
+  padding: 40px;
+  background-color: var(--cameo-color);
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__descr {
+    margin-bottom: 24px;
+  }
+
+  &__input {
+    max-width: 500px;
+    margin-bottom: 10px;
+
+    @include tablet {
+      max-width: none;
+    }
+  }
+
+  &__btn {
+    margin-top: 10px;
+  }
+
+  &__decorate {
+    position: absolute;
+    right: -176px;
+    top: -13px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @include small-tablet {
+    padding: 23px;
+  }
+}

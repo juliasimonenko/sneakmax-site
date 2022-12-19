@@ -1,0 +1,26 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Intro", sans-serif;
+  --content-width: 1180px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --accent-color: #F14F4F;
+  --hover-btn: #CC4949;
+  --blue-color: #484283;
+  --gray-color: #B2B5BB;
+  --river-color: #444B58;
+  --river-hover: #31343C;
+  --cameo-color: #DBBBA9;
+  --peach-color: #FFF4EE;
+  
+
+
+  // sizes
+  --grid-gap: 20px;
+  --main-offset: 40px;
+}

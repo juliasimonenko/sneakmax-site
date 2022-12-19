@@ -1,0 +1,154 @@
+<section id="cataloge" class="cataloge">
+  <div class="container cataloge__container">
+    <h2 class="title cataloge__title">Каталог</h2>
+    <div class="cataloge__content grid">
+      <div class="cataloge__left">
+        <div class="cataloge-filters">
+          <h3 class="cataloge__subtitle">
+            Подбор по параметрам
+          </h3>
+          <div class="cataloge__prop">
+            <strong class="cataloge__caption">Цена, руб</strong>
+            <div class="cataloge-price cataloge-prop--inner">
+              <!-- ПОЛЗУНКИ БЕЗ ВОЗМОЖНОСТИ ВВОДА ЦИФР -->
+              <!-- <div class="slider">
+                <div class="cataloge-price cataloge-prop--inner">
+                  <div class="range-slider cataloge-price__wrapper">
+                    <span class="rangeValues"></span>
+                    <input value="1850" min="1850" max="25768" step="1" type="range" class="cataloge-price__input">
+                    <input value="25768" min="1850" max="25768" step="1" type="range" class="cataloge-price__input">
+                  </div>
+                </div>
+              </div> -->
+              <div class="cataloge-price catalog__prop-inner">
+                <div class="cataloge-price__wrapper">
+                  <input type="text" class="cataloge-price__input" id="input-0">
+                  <input type="text" class="cataloge-price__input" id="input-1">
+                </div>
+                <div class="cataloge-price__element" id="range-slider"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cataloge__prop">
+            <strong class="cataloge__caption">Пол</strong>
+            <div class="cataloge-prop--inner cataloge__prop--check">
+              <label class="custom-checkbox">
+                <input type="checkbox" class="custom-checkbox__field">
+                <span class="custom-checkbox__content">мужской</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" class="custom-checkbox__field">
+                <span class="custom-checkbox__content">женский</span>
+              </label>
+            </div>
+          </div>
+          <div class="cataloge__prop">
+            <strong class="cataloge__caption">Размер</strong>
+            <div class="cataloge-prop--inner">
+              <table class="sizes-table">
+                <caption>Таблица размеров</caption>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label class="custom-radio contact-form__radio">
+                        <input type="radio" name="contact_method" value="Phone" class="custom-radio__input">
+                        <span class="custom-radio__text">35</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-radio contact-form__radio">
+                        <input type="radio" name="contact_method" value="Phone" class="custom-radio__input">
+                        <span class="custom-radio__text">36</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-radio contact-form__radio">
+                        <input type="radio" name="contact_method" value="Phone" class="custom-radio__input">
+                        <span class="custom-radio__text">37</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="custom-radio contact-form__radio">
+                        <input type="radio" name="contact_method" value="Phone" class="custom-radio__input">
+                        <span class="custom-radio__text">38</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-radio contact-form__radio">
+                        <input type="radio" name="contact_method" value="Phone" class="custom-radio__input">
+                        <span class="custom-radio__text">39</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-radio contact-form__radio">
+                        <input type="radio" name="contact_method" value="Phone" class="custom-radio__input">
+                        <span class="custom-radio__text">40</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="custom-radio contact-form__radio">
+                        <input type="radio" name="contact_method" value="Phone" class="custom-radio__input">
+                        <span class="custom-radio__text">41</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-radio contact-form__radio">
+                        <input type="radio" name="contact_method" value="Phone" class="custom-radio__input">
+                        <span class="custom-radio__text">42</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-radio contact-form__radio">
+                        <input type="radio" name="contact_method" value="Phone" class="custom-radio__input">
+                        <span class="custom-radio__text">43</span>
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="cataloge__btns">
+            <button class="btn-reset btn btn--river cataloge__btns--river">Применить</button>
+            <button class="btn-reset cataloge__btns--reset">сбросить</button>
+          </div>
+        </div>
+      </div>
+      <div class="cataloge__right">
+        <ul class="list-reset cataloge-list grid">
+          <li class="cataloge-list__item">
+            <article class="product">
+              <div class="product__image">
+                <picture>
+                  <source srcset="img/nike1.webp" type="image/webp">
+                  <img loading="lazy" src="img/nike1.jpg" class="image" width="280" height="293" alt="nike">
+                </picture>
+                <div class="product__btns">
+                  <button class="btn-reset product__btn" aria-label="Показать информацию о товаре">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#show"></use>
+                    </svg>
+                  </button>
+                  <button class="btn-reset product__btn" aria-label="Добавить в корзину">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <h3 class="product__title">Кроссовки Nike Air Force 1 '07 QS</h3>
+              <span class="product__price">11 000 р</span>
+            </article>
+          </li>
+        </ul>
+        <button class="btn btn-reset btn--accent cataloge__more">Показать еще</button>
+      </div>
+    </div>
+
+
+  </div>
+</section>
